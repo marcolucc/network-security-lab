@@ -49,11 +49,11 @@ RUN apt-get update \
 		
 
 
-RUN wget https://transfer.sh/XljUK/ff.tar.bz2 \
-	&& tar jxvf ff.tar.bz2 -C /usr/lib \	
-	&& ln -s /usr/lib/firefox/firefox /usr/bin/firefox \
-	&& wget https://raw.githubusercontent.com/kmm996/alpine-ssh-xfce4-vnc/master/check.sh \
-	&& chmod +x check.sh	
+#RUN wget https://transfer.sh/XljUK/ff.tar.bz2 \
+	#&& tar jxvf ff.tar.bz2 -C /usr/lib \	
+	#&& ln -s /usr/lib/firefox/firefox /usr/bin/firefox \
+	#&& wget https://raw.githubusercontent.com/kmm996/alpine-ssh-xfce4-vnc/master/check.sh \
+	#&& chmod +x check.sh	
 	#&& cd firefox	
 	#&& ./firefox/firefox 
 	
