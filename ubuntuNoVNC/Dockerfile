@@ -23,6 +23,8 @@ RUN pip install -r /web/requirements.txt
 
 #arp-spoofing lab
 #RUN echo -e "sslverify=0" >> /etc/dnf/dnf.conf
+RUN apt-get update -y
+RUN apt-get upgrade -y
 RUN sudo apt install dsniff -y
 
 # tini for subreap                                   
