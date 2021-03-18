@@ -33,5 +33,5 @@ case $i in
     exec $i
     ;;
 esac
-'''
 done
+'''
