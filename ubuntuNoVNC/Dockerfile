@@ -78,12 +78,12 @@ RUN sed "s|#\(.*multiverse\)|\1|g" /etc/apt/sources.list -i \
 
 
 ##### Add Oracle JAVA JRE8
-RUN mkdir -p $JAVA_HOME \
+#RUN mkdir -p $JAVA_HOME \
     # download and extract
-    && wget -qO- $SAKULI_DOWNLOAD_URL/3rd-party/java/jre-$JAVA_VERSION-linux-x64.tar.gz | tar xz --strip 1 -C $JAVA_HOME \
+    #&& wget -qO- $SAKULI_DOWNLOAD_URL/3rd-party/java/jre-$JAVA_VERSION-linux-x64.tar.gz | tar xz --strip 1 -C $JAVA_HOME \
     # set alternatives
-    && update-alternatives --install "/usr/bin/java" "java" "$JAVA_HOME/bin/java" 1 \
-    && update-alternatives --install "/usr/bin/javaws" "javaws" "$JAVA_HOME/bin/javaws" 1 \
+    #&& update-alternatives --install "/usr/bin/java" "java" "$JAVA_HOME/bin/java" 1 \
+    #&& update-alternatives --install "/usr/bin/javaws" "javaws" "$JAVA_HOME/bin/javaws" 1 \
     #&& update-alternatives --install "/usr/lib/firefox/browser/plugins/mozilla-javaplugin.so" "mozilla-javaplugin.so" "$JAVA_HOME/lib/amd64/libnpjp2.so" 1
 
 # xvnc server porst, if $DISPLAY=:1 port will be 5901
