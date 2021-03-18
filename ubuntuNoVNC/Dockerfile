@@ -38,6 +38,8 @@ ADD startup.sh /
 ADD supervisord.conf /etc/supervisor/conf.d/
 ADD doro-lxde-wallpapers /usr/share/doro-lxde-wallpapers/
 
+RUN chmod +x startup.sh
+
 EXPOSE 6080
 WORKDIR /root
 ENTRYPOINT ["/startup.sh"]
