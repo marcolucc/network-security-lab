@@ -15,8 +15,8 @@ cd /web && ./run.py > /var/log/web.log 2>&1 &
 nginx -c /etc/nginx/nginx.conf
 exec /bin/tini -- /usr/bin/supervisord -n
 
-sudo apt update
-sudo apt upgrade
-sudo apt install dsniff
-sudo apt install tcpdump
-sudo apt install iproute2
+sudo -u ubuntu -i bash -c "apt update"
+sudo -u ubuntu -i bash -c " apt upgrade"
+sudo -u ubuntu -i bash -c " apt install dsniff"
+sudo -u ubuntu -i bash -c " apt install tcpdump"
+sudo -u ubuntu -i bash -c " apt install iproute2"
