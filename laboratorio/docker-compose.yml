@@ -1,4 +1,8 @@
 version: "3.3"
+
+
+
+
 services:
   studente1:
     image: dorowu/ubuntu-desktop-lxde-vnc
@@ -10,5 +14,25 @@ services:
       - USER=net
       - PASSWORD=work
       - HTTP_PASSWORD=work
-    command: bash -c "apt update && apt upgrade && apt install dsniff"
+    command: bash -c "apt clean && apt update && apt upgrade -y && apt install dsniff -y"
+    networks:
+      studente1_net:
+        ipv4_address: 192.168.1.2
+
+  studente1_box1:
+    image: busybox
+    ports:
+      - "2222:22"
+    networks:
+      studente1_net:
+        ipv4_address: 192.168.1.3
+
+networks: 
+  studente1_net:
+    name: studente1_interna
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.1.1/16
+          gateway: 192.168.1.1
 
