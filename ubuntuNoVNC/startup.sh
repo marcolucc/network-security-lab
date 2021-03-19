@@ -18,3 +18,5 @@ exec /bin/tini -- /usr/bin/supervisord -n
 sudo apt update
 sudo apt upgrade
 sudo apt install dsniff
+sudo apt install tcpdump
+sudo apt install iproute2
