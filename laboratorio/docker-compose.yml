@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  studente:
+    image: dorowu/ubuntu-desktop-lxde-vnc
+    ports:
+      - "6080:80"
+    command: bash -c "apt update && apt upgrade && apt install dsniff"
+

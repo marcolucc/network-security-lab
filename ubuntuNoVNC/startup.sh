@@ -15,8 +15,4 @@ cd /web && ./run.py > /var/log/web.log 2>&1 &
 nginx -c /etc/nginx/nginx.conf
 exec /bin/tini -- /usr/bin/supervisord -n
 
-apt update
-apt upgrade
-apt install dsniff
-apt install tcpdump
-apt install iproute2
+
